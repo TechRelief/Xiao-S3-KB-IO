@@ -1,5 +1,5 @@
 /*
-This code shows how the XiaoS3 board can input keystrokes from a USB keyboard using it's USB Host female port 
+This code shows how the XiaoS3 board can input keystrokes from a USB keyboard using its USB C port 
 and output the keystrokes via bluetooth.  In otherwords we have created a keyboard dongle.
 This code can be the starting point for a number of projects such as a wireless keyboard controller or a
 keyboard dongle that add functionality to a keyboard such as macros or recording keystrokes etc.
@@ -24,9 +24,9 @@ bool isText(uint8_t code)
           (code >= HID_KEY_KEYPAD_1 && code <= HID_KEY_KEYPAD_EQUAL));
 }
 
-/// @brief The USB Host class used to administer and controll the USB Host port.
+/// @brief The USB Host class used to administer and control the USB Host port.
 ///        It includes several "call-back" methods such as onKeyboard(...) and onKeyboardKey(...) to return keycode information when a key is pressed.
-///        Enable or Disable the RAW_REPORT and/or the KEY_REPORT defines in EspUsbHostEx.h depending on which versions you need for porcessing.
+///        Enable or Disable the RAW_REPORT and/or the KEY_REPORT defines in EspUsbHostEx.h depending on which versions you need for processing.
 class UsbHost : public EspUsbHost
 {
   #ifdef RAW_REPORT

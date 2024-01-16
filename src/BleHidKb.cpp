@@ -34,7 +34,7 @@ bool bleIsConnected()
 // The report map describes the HID device (a keyboard in this case) and
 // the messages (reports in HID terms) sent and received.
 static const uint8_t REPORT_MAP[] =
-    {
+{
         USAGE_PAGE(1), 0x01,      // Generic Desktop Controls
         USAGE(1), 0x06,           // Keyboard
         COLLECTION(1), 0x01,      // Application
